@@ -1,21 +1,21 @@
 # emilioramirez.com
 
-Un documento personal vivo, construido deliberadamente con HTML y CSS.
+A living personal document, deliberately built with HTML and CSS.
 
-## Ver localmente
+## View locally
 
-Abre `index.html` directamente en el navegador. No requiere instalación, compilación ni dependencias.
+Open `index.html` directly in a browser. It requires no installation, build process, or dependencies.
 
-También puedes servir la carpeta con cualquier servidor estático si quieres probarla desde otros dispositivos.
+You can also serve the folder with any static server if you want to test it from other devices.
 
-## Principios de diseño
+## Design principles
 
-- El centro contiene las ideas más estables.
-- Los márgenes contienen observaciones recientes y pequeñas.
-- Todo se desplaza como un solo documento.
-- En pantallas angostas, las notas pasan debajo del texto relacionado.
-- Antes de agregar algo, preguntar: “¿Esto hace que la página se sienta más tranquila o más pesada?”
+- The center contains the most stable ideas.
+- The margins contain brief, recent observations.
+- Everything scrolls together as a single document.
+- On narrow screens, notes move below their related text.
+- Before adding anything, ask: “Does this make the page feel calmer or heavier?”
 
-## Cómo agregar una nota
+## Add a note
 
-Copia un bloque `aside.margin-note`, actualiza la fecha y el texto, y colócalo dentro del `section.passage` relacionado. Usa `margin-note--left` o `margin-note--right` para elegir el margen en escritorio.
+Copy an `aside.margin-note` block, update its date and text, and place it inside the related `section.passage`. Use `margin-note--left` or `margin-note--right` to choose its desktop margin.
