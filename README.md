@@ -12,6 +12,7 @@ You can also serve the folder with any static server if you want to test it from
 
 - The center contains the most stable ideas.
 - The margins contain brief, recent observations.
+- Margin notes use a self-hosted handwriting font to feel more like annotations.
 - Everything scrolls together as a single document.
 - On narrow screens, notes move below their related text.
 - Before adding anything, ask: “Does this make the page feel calmer or heavier?”

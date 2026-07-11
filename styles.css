@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/kalam-latin-400.woff2") format("woff2");
+}
+
 :root {
   --paper: #f2eee5;
   --ink: #302f2b;
   --soft-ink: #777267;
   --faint-ink: #9a9386;
   --sunset: #9f543d;
+  --handwriting: "Kalam", "Bradley Hand", "Segoe Print", cursive;
   --copy-width: 36rem;
   --note-width: 12.5rem;
   --gutter: clamp(2rem, 5vw, 5.5rem);
@@ -152,6 +161,13 @@ h2,
   line-height: 1.55;
 }
 
+.margin-note p {
+  font-family: var(--handwriting);
+  font-size: 1.08em;
+  line-height: 1.48;
+  transform: rotate(-0.45deg);
+}
+
 .margin-note--left {
   grid-column: 1;
   text-align: right;
@@ -159,6 +175,10 @@ h2,
 
 .margin-note--right {
   grid-column: 3;
+}
+
+.margin-note--right p {
+  transform: rotate(0.35deg);
 }
 
 .margin-note time {
@@ -215,6 +235,11 @@ h2,
     padding-left: 1.25rem;
     border-left: 1px solid rgb(159 84 61 / 38%);
     text-align: left;
+  }
+
+  .margin-note p,
+  .margin-note--right p {
+    transform: none;
   }
 
   .passage:has(.margin-note--left) .margin-note {
