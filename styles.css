@@ -9,13 +9,29 @@
 :root {
   --paper: #f2eee5;
   --ink: #302f2b;
-  --soft-ink: #777267;
-  --faint-ink: #9a9386;
+  --soft-ink: #6b675d;
+  --faint-ink: #6f6a60;
   --sunset: #9f543d;
+  --paper-glow: rgb(159 84 61 / 5%);
+  --paper-wash: rgb(255 255 255 / 10%);
+  --note-border: rgb(159 84 61 / 38%);
   --handwriting: "Kalam", "Bradley Hand", "Segoe Print", cursive;
   --copy-width: 36rem;
   --note-width: 12.5rem;
   --gutter: clamp(2rem, 5vw, 5.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1c1a17;
+    --ink: #e8e2d4;
+    --soft-ink: #a89f8f;
+    --faint-ink: #8f8678;
+    --sunset: #d9825c;
+    --paper-glow: rgb(217 130 92 / 8%);
+    --paper-wash: rgb(0 0 0 / 22%);
+    --note-border: rgb(217 130 92 / 32%);
+  }
 }
 
 * {
@@ -23,7 +39,7 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: light dark;
   background: var(--paper);
 }
 
@@ -31,8 +47,8 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 82% 8%, rgb(159 84 61 / 5%), transparent 28rem),
-    linear-gradient(rgb(255 255 255 / 10%), rgb(255 255 255 / 10%)),
+    radial-gradient(circle at 82% 8%, var(--paper-glow), transparent 28rem),
+    linear-gradient(var(--paper-wash), var(--paper-wash)),
     var(--paper);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   font-size: clamp(1.08rem, 0.3vw + 1rem, 1.2rem);
@@ -233,7 +249,7 @@ h2,
     width: min(100%, 22rem);
     margin-top: 2.25rem;
     padding-left: 1.25rem;
-    border-left: 1px solid rgb(159 84 61 / 38%);
+    border-left: 1px solid var(--note-border);
     text-align: left;
   }
 
@@ -278,7 +294,21 @@ h2,
   }
 }
 
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --ink: #f5f1e6;
+    --soft-ink: #c2b9a8;
+  }
+}
+
 @media print {
+  :root {
+    --ink: #302f2b;
+    --soft-ink: #6b675d;
+    --faint-ink: #6f6a60;
+    --sunset: #9f543d;
+  }
+
   body {
     background: #fff;
   }
