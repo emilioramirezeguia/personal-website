@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #f2eee5; }
+    text { fill: #302f2b; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #1c1a17; }
+      text { fill: #e8e2d4; }
+    }
+  </style>
+  <rect width="64" height="64" />
+  <g transform="rotate(-9 32 32)">
+    <text x="32" y="47" font-family="Georgia, 'Iowan Old Style', serif" font-size="46" text-anchor="middle">e</text>
+  </g>
+</svg>
